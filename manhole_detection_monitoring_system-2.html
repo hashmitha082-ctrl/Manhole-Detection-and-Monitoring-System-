@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manhole Detection & Monitoring System</title>
+<style>
+:root{
+  --bg:#07111f; --card:#0d1b2d; --card2:#10243a; --text:#eef6ff;
+  --muted:#a9bdd2; --accent:#39d9ff; --accent2:#65ffb0; --danger:#ff5c6c;
+  --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 80% 10%,#12395a 0,transparent 30%),var(--bg);color:var(--text);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;color:var(--accent);letter-spacing:1px}.navlinks a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+.hero{padding:90px 7% 70px;min-height:82vh;display:flex;align-items:center}
+.hero-inner{max-width:900px}.tag{display:inline-block;padding:7px 12px;border:1px solid rgba(57,217,255,.35);border-radius:30px;color:var(--accent);font-size:13px}
+h1{font-size:clamp(42px,8vw,76px);line-height:1.02;margin:20px 0 16px}
+.gradient{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+.hero p{max-width:700px;color:var(--muted);font-size:18px}
+.btn{display:inline-block;margin-top:22px;padding:13px 20px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#06101b;text-decoration:none;font-weight:800}
+section{padding:70px 7%;max-width:1200px;margin:auto}
+.section-title{font-size:34px;margin:0 0 10px}.section-sub{color:var(--muted);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.icon{font-size:28px}.card h3{margin:8px 0}.card p{color:var(--muted);margin:0}
+.flow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:25px}
+.step{padding:16px 18px;border:1px solid rgba(57,217,255,.25);background:#0b1a2c;border-radius:14px;font-weight:700}
+.arrow{color:var(--accent);font-size:24px}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.status .card strong{display:block;font-size:20px;margin-top:5px}
+.green{color:var(--accent2)}.red{color:var(--danger)}
+table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;background:var(--card)}
+th,td{text-align:left;padding:14px;border-bottom:1px solid var(--line)}
+th{color:var(--accent)}td{color:var(--muted)}
+.team{display:flex;flex-wrap:wrap;gap:10px}.member{padding:10px 15px;background:var(--card2);border:1px solid var(--line);border-radius:30px}
+footer{text-align:center;padding:35px 7%;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:650px){.navlinks{display:none}.hero{padding-top:65px}section{padding-top:55px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">IOT SMARTZONE</div>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#working">How It Works</a><a href="#components">Components</a><a href="#team">Team</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="tag">IoT • SMART CITY • PUBLIC SAFETY</span>
+    <h1>Manhole Detection<br>& <span class="gradient">Monitoring System</span></h1>
+    <p>An IoT-based smart safety solution designed to detect unsafe manhole conditions, monitor environmental parameters, and provide timely alerts.</p>
+    <a class="btn" href="#about">Explore Project ↓</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="section-title">About the Project</h2>
+  <p class="section-sub">Making manhole monitoring smarter, safer and more responsive.</p>
+  <div class="card">
+    <p>The Manhole Detection and Monitoring System uses an ESP32 as the main IoT controller and combines multiple sensors and communication modules. The system can monitor manhole conditions, water level and environmental parameters, while providing local indicators and remote communication for improved safety and awareness.</p>
+  </div>
+</section>
+
+<section id="working">
+  <h2 class="section-title">How It Works</h2>
+  <p class="section-sub">A connected sensing and alert pathway.</p>
+  <div class="flow">
+    <div class="step">📡 Sensors</div><div class="arrow">→</div>
+    <div class="step">🧠 ESP32</div><div class="arrow">→</div>
+    <div class="step">📊 Monitoring</div><div class="arrow">→</div>
+    <div class="step">🚨 Alerts</div>
+  </div>
+  <br>
+  <div class="grid">
+    <div class="card"><div class="icon">📏</div><h3>Condition Detection</h3><p>Ultrasonic and IR sensing help identify relevant changes around the manhole.</p></div>
+    <div class="card"><div class="icon">💧</div><h3>Water Monitoring</h3><p>A water-level sensor helps monitor rising water conditions.</p></div>
+    <div class="card"><div class="icon">🌡️</div><h3>Environment</h3><p>DHT22 and MQ-135 provide temperature, humidity and air-quality-related readings.</p></div>
+    <div class="card"><div class="icon">📱</div><h3>Communication</h3><p>GPS and GSM modules support location information and remote communication.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Smart Monitoring</h2>
+  <p class="section-sub">Example dashboard indicators for the prototype.</p>
+  <div class="status">
+    <div class="card">🟢 System<strong class="green">ONLINE</strong></div>
+    <div class="card">🚦 Status<strong>MONITORING</strong></div>
+    <div class="card">📍 Location<strong>GPS ENABLED</strong></div>
+    <div class="card">📶 Communication<strong>GSM READY</strong></div>
+  </div>
+</section>
+
+<section id="components">
+  <h2 class="section-title">Components Used</h2>
+  <p class="section-sub">Hardware used in our IoT prototype.</p>
+  <div class="card">
+    <table>
+      <tr><th>Component</th><th>Role</th></tr>
+      <tr><td>ESP32</td><td>Main IoT controller</td></tr>
+      <tr><td>Ultrasonic Sensor</td><td>Distance / condition sensing</td></tr>
+      <tr><td>IR Sensor</td><td>Object / condition detection</td></tr>
+      <tr><td>Emergency Safety Lid / Plate</td><td>Physical safety mechanism</td></tr>
+      <tr><td>MQ-135 Gas Sensor</td><td>Air-quality / gas monitoring</td></tr>
+      <tr><td>Water-Level Sensor</td><td>Water-level monitoring</td></tr>
+      <tr><td>DHT22</td><td>Temperature and humidity sensing</td></tr>
+      <tr><td>Buzzer</td><td>Audible alert</td></tr>
+      <tr><td>GPS NEO-6M</td><td>Location information</td></tr>
+      <tr><td>Red / Green LEDs</td><td>Status indication</td></tr>
+      <tr><td>OLED / LCD</td><td>Local display</td></tr>
+      <tr><td>2 × High-Torque Servo Motors</td><td>Safety mechanism control</td></tr>
+      <tr><td>SIM800L GSM Module</td><td>Remote communication</td></tr>
+      <tr><td>Breadboard & Jumper Wires</td><td>Circuit connections</td></tr>
+      <tr><td>ESP32 USB Cable</td><td>Programming / power connection</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Safety & Alerts</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">🚨</div><h3>Alert System</h3><p>Buzzer and LEDs provide immediate local status indication.</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>Safety Mechanism</h3><p>The emergency lid/plate and servo motors are included as part of the physical safety concept.</p></div>
+    <div class="card"><div class="icon">📲</div><h3>Remote Communication</h3><p>The GSM module can support sending information or alerts remotely.</p></div>
+  </div>
+</section>
+
+<section id="team">
+  <h2 class="section-title">Our Team</h2>
+  <p class="section-sub">Kristu Jayanti University • Computer Applications (BCA IoT)</p>
+  <div class="team">
+    <div class="member">Velan</div><div class="member">Madhumitha</div><div class="member">Adwaith</div>
+    <div class="member">Manjitha</div><div class="member">Nai</div><div class="member">Ash</div>
+  </div>
+</section>
+
+<footer>
+  <strong>Manhole Detection & Monitoring System</strong><br>
+  IoT SmartZone • Kristu Jayanti University • BCA IoT
+</footer>
+</body>
+</html>
